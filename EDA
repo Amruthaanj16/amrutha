@@ -1,0 +1,14 @@
+library(ggplot2)
+library(ggdist)
+library(ggbeeswarm)
+
+head(music)
+str(music)
+ggplot(music,aes(Track,fill=`Apple Music Playlist Count`,color=`Apple Music Playlist Count`))+
+  geom_boxplot(alpha=0.5)
+
+ggplot(music,aes(Track,fill=`Apple Music Playlist Count`,color=`Apple Music Playlist Count`))+
+  geom_dotplot(alpha=0.5)
+
+ggplot(music,aes(Track,fill=`Apple Music Playlist Count`,color=`Apple Music Playlist Count`))+
+  stat_dots(alpha=0.5)
